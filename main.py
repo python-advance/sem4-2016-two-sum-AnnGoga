@@ -2,18 +2,6 @@
         Two sum from https://leetcode.com/problems/two-sum
 """
 
-# TODO
-
-# Сделать хэш-таблицу с ключами по индексам, т.е.
-
-# {0:7, 1:9, ... }
-
-# Реализовать one pass решение из leetcode
-
-# Оценить работу программы с использованием структур из
-# collections
-
-
 class Solution:
 
     def deco(func):
@@ -22,9 +10,9 @@ class Solution:
 
         @functools.wraps(func)
         def inner(*args, **kwargs):
-            start_time = time.time()  # начало таймера
+            start_time = time.time()  # начало
             result = func(*args, **kwargs)
-            end_time = time.time()  # завершение таймера
+            end_time = time.time()  # завершение 
             time_delta = end_time - start_time
             print(f'Время выполнения кода {func.__name__} заняло: {time_delta}')
             return result
@@ -78,17 +66,3 @@ if __name__ == '__main__':
     import timeit
 
     # print(timeit.timeit("test()", setup="from __main__ import test"))
-
-# Given nums = [2, 7, 11, 15], target = 9,
-#
-# Because nums[0] + nums[1] = 2 + 7 = 9,
-# return [0, 1].
-
-# Шаги решения:
-# 1. Решаем "влоб", оцениваем время работы.
-# 2. timeit
-# 2a. Декоратор
-# 3. Решаем с хэш-таблицей (словарь)
-# 4. Улучшение с помощью модуля collections?
-# 5. Замеряем время работы
-# 6. Делаем выводы
